@@ -1,49 +1,40 @@
-# 🚢 Titanic Survival Prediction Using Machine Learning | Kaggle Top Beginner Project
+# Titanic - Machine Learning from Disaster
 
-This project solves the Titanic - Machine Learning from Disaster challenge hosted on [Kaggle](https://www.kaggle.com/competitions/titanic). We build a machine learning model to predict which passengers survived the Titanic shipwreck.
+This is a beginner-friendly machine learning project based on the classic **Titanic dataset** from [Kaggle](https://www.kaggle.com/competitions/titanic).
 
----
+## Goal
 
-## 📌 Table of Contents
-
-- [Overview](#overview)
-- [Dataset Info](#dataset-info)
-- [Installation](#installation)
-- [Exploratory Data Analysis](#exploratory-data-analysis)
-- [Model Building](#model-building)
-- [Generate Submission File](#generate-submission-file)
-- [Technologies Used](#technologies-used)
-- [How to Contribute](#how-to-contribute)
-- [Author](#author)
+Predict whether a passenger survived or not using features like age, gender, ticket class, etc.
 
 ---
 
-## 🧠 Overview
+## Files
 
-In this beginner-friendly machine learning project, we:
-- Load and clean real-world data
-- Perform feature engineering
-- Train a classification model (Logistic Regression / Random Forest)
-- Predict survival outcomes on test data
-- Submit predictions to Kaggle
+- `train.csv` - Training data with survival labels  
+- `test.csv` - Test data without survival labels  
+- `submission.csv` - Final predictions to upload on Kaggle  
+- `titanic_model.ipynb` - Jupyter notebook with code
 
 ---
 
-## 📂 Dataset Info
+## What I Did
 
-You can download the dataset from:  
-👉 [Kaggle Titanic Dataset](https://www.kaggle.com/competitions/titanic/data)
-
-**Files used:**
-- `train.csv` – training dataset
-- `test.csv` – test dataset
-- `submission.csv` – example submission file
+1. Loaded and explored the dataset
+2. Cleaned data (handled missing values)
+3. Converted categorical data to numeric
+4. Trained a machine learning model
+5. Made predictions on test data
+6. Saved predictions to `submission.csv`
 
 ---
 
-## ⚙️ Installation
+## Libraries Used
 
-```bash
-git clone https://github.com/yourusername/titanic-ml-project.git
-cd titanic-ml-project
-pip install -r requirements.txt
+```python
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.ensemble import RandomForestClassifier
